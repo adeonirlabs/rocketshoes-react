@@ -1,9 +1,11 @@
 import React from 'react'
 import { MdShoppingCart } from 'react-icons/md'
 
+import { api } from 'services'
+
 import { ProductList } from './styles'
 
-export default function Home() {
+const Home = () => {
   return (
     <ProductList>
       <li>
@@ -89,3 +91,5 @@ export default function Home() {
     </ProductList>
   )
 }
+
+export default Home

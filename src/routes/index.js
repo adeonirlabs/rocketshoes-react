@@ -1,10 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import Cart from './pages/Cart'
+import { Home, Cart } from 'pages'
 
-export default function Routes() {
+const Routes = () => {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
@@ -12,3 +11,5 @@ export default function Routes() {
     </Switch>
   )
 }
+
+export default Routes

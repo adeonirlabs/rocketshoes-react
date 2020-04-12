@@ -7,7 +7,7 @@ import { Container, Cart } from './styles'
 
 import logo from '../../assets/images/logo.svg'
 
-export default function Header() {
+const Header = () => {
   return (
     <Container>
       <Link to="/">
@@ -23,3 +23,5 @@ export default function Header() {
     </Container>
   )
 }
+
+export default Header

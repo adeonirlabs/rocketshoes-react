@@ -3,17 +3,17 @@ import { MdRemoveCircle, MdAddCircle, MdDelete } from 'react-icons/md'
 
 import { Container, ProductTable, Footer } from './styles'
 
-export default function Cart() {
+const Cart = () => {
   return (
     <Container>
       <ProductTable>
         <thead>
           <tr>
-            <th></th>
+            <th />
             <th>Produto</th>
             <th>Quantidade</th>
             <th>Subtotal</th>
-            <th></th>
+            <th />
           </tr>
         </thead>
         <tbody>
@@ -61,3 +61,5 @@ export default function Cart() {
     </Container>
   )
 }
+
+export default Cart
