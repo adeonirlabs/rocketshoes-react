@@ -3,6 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 import background from '../assets/images/background.svg'
 
 export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +19,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Lato, sans-serif;
     font-size: 14px;
   }
 
