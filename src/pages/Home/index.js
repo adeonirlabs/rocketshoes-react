@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { connect, useDispatch } from 'react-redux'
 import { MdShoppingCart } from 'react-icons/md'
 
+import { addToCart } from 'pages/Cart/actions'
+
 import { api } from 'services'
 import { formatPrice } from 'utils'
 
@@ -22,10 +24,7 @@ const Home = () => {
   }, [])
 
   const handleProduct = (product) => {
-    dispatch({
-      type: 'ADD_TO_CART',
-      product,
-    })
+    dispatch(addToCart(product))
   }
 
   return (

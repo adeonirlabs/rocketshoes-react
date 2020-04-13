@@ -25,6 +25,8 @@ const Header = ({ counter }) => {
   )
 }
 
-export default connect((state) => ({
+const mapStateToProps = (state) => ({
   counter: state.cart.length,
-}))(Header)
+})
+
+export default connect(mapStateToProps)(Header)
