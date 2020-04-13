@@ -9,7 +9,7 @@ import { formatPrice } from 'utils'
 
 import { ProductList } from './styles'
 
-const Home = () => {
+const Home = ({ amount }) => {
   const dispatch = useDispatch()
   const [products, setProducts] = useState([])
 
@@ -37,7 +37,8 @@ const Home = () => {
 
           <button type="button" onClick={() => handleProduct(product)}>
             <div>
-              <MdShoppingCart size={16} color="#fff" /> 3
+              <MdShoppingCart size={16} color="#fff" />{' '}
+              {amount[product.id] || 0}
             </div>
 
             <span>Adicionar ao carrinho</span>
@@ -48,4 +49,12 @@ const Home = () => {
   )
 }
 
-export default connect()(Home)
+const mapStateToProps = (state) => ({
+  amount: state.cart.reduce((amount, product) => {
+    amount[product.id] = product.amount
+
+    return amount
+  }, {}),
+})
+
+export default connect(mapStateToProps)(Home)

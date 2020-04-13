@@ -22,6 +22,20 @@ const cart = (state = [], action) => {
         }
       })
 
+    case 'Cart/UPDATE_AMOUNT': {
+      if (action.amount <= 0) {
+        return state
+      }
+
+      return produce(state, (draft) => {
+        const index = draft.findIndex((p) => p.id === action.id)
+
+        if (index >= 0) {
+          draft[index].amount = Number(action.amount)
+        }
+      })
+    }
+
     default:
       return state
   }
