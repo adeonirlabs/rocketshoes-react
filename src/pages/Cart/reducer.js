@@ -1,14 +1,19 @@
 import produce from 'immer'
+import {
+  CART_ADD_SUCCESS,
+  CART_REMOVE,
+  CART_UPDATE_AMOUNT_SUCCESS,
+} from './constants'
 
 const cart = (state = [], action) => {
   switch (action.type) {
-    case 'Cart/ADD_SUCCESS':
+    case CART_ADD_SUCCESS:
       return produce(state, (draft) => {
         const { product } = action
         draft.push(product)
       })
 
-    case 'Cart/REMOVE':
+    case CART_REMOVE:
       return produce(state, (draft) => {
         const index = draft.findIndex((prod) => prod.id === action.id)
 
@@ -17,7 +22,7 @@ const cart = (state = [], action) => {
         }
       })
 
-    case 'Cart/UPDATE_AMOUNT_SUCCESS': {
+    case CART_UPDATE_AMOUNT_SUCCESS: {
       return produce(state, (draft) => {
         const index = draft.findIndex((prod) => prod.id === action.id)
 

@@ -10,6 +10,7 @@ import { toast } from 'react-toastify'
 
 import { api } from 'services'
 import { formatPrice } from 'utils'
+import { CART_ADD, CART_UPDATE_AMOUNT } from './constants'
 
 import { addToCartSuccess, updateAmountSuccess } from './actions'
 
@@ -60,6 +61,6 @@ function* updateAmount({ id, amount }) {
 }
 
 export default all([
-  takeEvery('Cart/ADD', addToCart),
-  takeLatest('Cart/UPDATE_AMOUNT', updateAmount),
+  takeEvery(CART_ADD, addToCart),
+  takeLatest(CART_UPDATE_AMOUNT, updateAmount),
 ])

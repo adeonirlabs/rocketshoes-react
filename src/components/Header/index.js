@@ -18,8 +18,8 @@ const Header = () => {
       </Link>
       <Cart to="/cart">
         <div>
-          <strong>Meu carrinho</strong>
-          <span>{counter} itens</span>
+          <strong>My Cart</strong>
+          <span>{counter} items</span>
         </div>
         <MdShoppingBasket size={36} color="#fff" />
       </Cart>

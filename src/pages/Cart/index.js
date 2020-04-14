@@ -9,19 +9,19 @@ import { formatPrice } from 'utils'
 import { Container, ProductTable, Footer } from './styles'
 
 const Cart = () => {
-  const total = useSelector((state) => {
+  const cart = useSelector((state) =>
+    state.cart.map((product) => ({
+      ...product,
+      subtotal: formatPrice(product.price * product.amount),
+    }))
+  )
+
+  const total = useSelector((state) =>
     formatPrice(
       state.cart.reduce((count, product) => {
         return count + product.price * product.amount
       }, 0)
     )
-  })
-
-  const cart = useSelector((state) =>
-    state.cart.map((product) => ({
-      ...product,
-      subTotal: formatPrice(product.price * product.amount),
-    }))
   )
 
   const dispatch = useDispatch()
@@ -44,15 +44,15 @@ const Cart = () => {
         <thead>
           <tr>
             <th />
-            <th>Produto</th>
-            <th>Quantidade</th>
+            <th>Product</th>
+            <th>Amount</th>
             <th>Subtotal</th>
             <th />
           </tr>
         </thead>
         <tbody>
           {cart.map((product) => (
-            <tr>
+            <tr key={product.id}>
               <td>
                 <img src={product.image} alt={product.title} />
               </td>
@@ -78,7 +78,7 @@ const Cart = () => {
                 </div>
               </td>
               <td>
-                <strong>{product.subTotal}</strong>
+                <strong>{product.subtotal}</strong>
               </td>
               <td>
                 <button
@@ -93,7 +93,7 @@ const Cart = () => {
         </tbody>
       </ProductTable>
       <Footer>
-        <button type="button">Finalizar pedido</button>
+        <button type="button">Proceed to Checkout</button>
 
         <div>
           <span>Total</span>

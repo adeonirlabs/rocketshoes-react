@@ -51,7 +51,7 @@ const Home = () => {
               {amount[product.id] || 0}
             </div>
 
-            <span>Adicionar ao carrinho</span>
+            <span>Add to Cart</span>
           </button>
         </li>
       ))}
