@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
-
 import { Provider } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
 
 import Routes from 'routes'
 
@@ -16,6 +16,7 @@ function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
+        <ToastContainer autoClose={3000} />
         <GlobalStyles />
         <Header />
         <Routes />

@@ -2,33 +2,24 @@ import produce from 'immer'
 
 const cart = (state = [], action) => {
   switch (action.type) {
-    case 'Cart/ADD':
+    case 'Cart/ADD_SUCCESS':
       return produce(state, (draft) => {
-        const index = draft.findIndex((p) => p.id === action.product.id)
-
-        if (index >= 0) {
-          draft[index].amount += 1
-        } else {
-          draft.push({ ...action.product, amount: 1 })
-        }
+        const { product } = action
+        draft.push(product)
       })
 
     case 'Cart/REMOVE':
       return produce(state, (draft) => {
-        const index = draft.findIndex((p) => p.id === action.id)
+        const index = draft.findIndex((prod) => prod.id === action.id)
 
         if (index >= 0) {
           draft.splice(index, 1)
         }
       })
 
-    case 'Cart/UPDATE_AMOUNT': {
-      if (action.amount <= 0) {
-        return state
-      }
-
+    case 'Cart/UPDATE_AMOUNT_SUCCESS': {
       return produce(state, (draft) => {
-        const index = draft.findIndex((p) => p.id === action.id)
+        const index = draft.findIndex((prod) => prod.id === action.id)
 
         if (index >= 0) {
           draft[index].amount = Number(action.amount)

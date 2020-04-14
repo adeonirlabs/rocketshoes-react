@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { MdShoppingBasket } from 'react-icons/md'
 
@@ -8,7 +8,9 @@ import { Container, Cart } from './styles'
 
 import logo from '../../assets/images/logo.svg'
 
-const Header = ({ counter }) => {
+const Header = () => {
+  const counter = useSelector((state) => state.cart.length)
+
   return (
     <Container>
       <Link to="/">
@@ -25,8 +27,4 @@ const Header = ({ counter }) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  counter: state.cart.length,
-})
-
-export default connect(mapStateToProps)(Header)
+export default Header

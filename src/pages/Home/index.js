@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { connect, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { MdShoppingCart } from 'react-icons/md'
 
 import { addToCart } from 'pages/Cart/actions'
@@ -9,9 +9,16 @@ import { formatPrice } from 'utils'
 
 import { ProductList } from './styles'
 
-const Home = ({ amount }) => {
-  const dispatch = useDispatch()
+const Home = () => {
   const [products, setProducts] = useState([])
+
+  const amount = useSelector((state) =>
+    state.cart.reduce((count, product) => {
+      count[product.id] = product.amount
+
+      return count
+    }, {})
+  )
 
   useEffect(() => {
     api.get('/products').then((response) => {
@@ -19,12 +26,15 @@ const Home = ({ amount }) => {
         ...product,
         formattedPrice: formatPrice(product.price),
       }))
+
       setProducts(data)
     })
   }, [])
 
-  const handleProduct = (product) => {
-    dispatch(addToCart(product))
+  const dispatch = useDispatch()
+
+  const handleAddProduct = (id) => {
+    dispatch(addToCart(id))
   }
 
   return (
@@ -35,7 +45,7 @@ const Home = ({ amount }) => {
           <strong>{product.title}</strong>
           <span>{product.formattedPrice}</span>
 
-          <button type="button" onClick={() => handleProduct(product)}>
+          <button type="button" onClick={() => handleAddProduct(product.id)}>
             <div>
               <MdShoppingCart size={16} color="#fff" />{' '}
               {amount[product.id] || 0}
@@ -49,12 +59,4 @@ const Home = ({ amount }) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  amount: state.cart.reduce((amount, product) => {
-    amount[product.id] = product.amount
-
-    return amount
-  }, {}),
-})
-
-export default connect(mapStateToProps)(Home)
+export default Home

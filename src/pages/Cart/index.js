@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect, useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { MdRemoveCircle, MdAddCircle, MdDelete } from 'react-icons/md'
 
 import { removeFromCart, updateAmount } from 'pages/Cart/actions'
@@ -8,18 +8,34 @@ import { formatPrice } from 'utils'
 
 import { Container, ProductTable, Footer } from './styles'
 
-const Cart = ({ cart, total }) => {
+const Cart = () => {
+  const total = useSelector((state) => {
+    formatPrice(
+      state.cart.reduce((count, product) => {
+        return count + product.price * product.amount
+      }, 0)
+    )
+  })
+
+  const cart = useSelector((state) =>
+    state.cart.map((product) => ({
+      ...product,
+      subTotal: formatPrice(product.price * product.amount),
+    }))
+  )
+
   const dispatch = useDispatch()
 
-  const handleRemoveFromCart = (id) => {
-    dispatch(removeFromCart(id))
+  const handleDecrement = (product) => {
+    dispatch(updateAmount(product.id, product.amount - 1))
   }
 
   const handleIncrement = (product) => {
     dispatch(updateAmount(product.id, product.amount + 1))
   }
-  const handleDecrement = (product) => {
-    dispatch(updateAmount(product.id, product.amount - 1))
+
+  const handleRemoveFromCart = (id) => {
+    dispatch(removeFromCart(id))
   }
 
   return (
@@ -88,16 +104,4 @@ const Cart = ({ cart, total }) => {
   )
 }
 
-const mapStateToProps = (state) => ({
-  cart: state.cart.map((product) => ({
-    ...product,
-    subTotal: formatPrice(product.price * product.amount),
-  })),
-  total: formatPrice(
-    state.cart.reduce((total, product) => {
-      return total + product.price * product.amount
-    }, 0)
-  ),
-})
-
-export default connect(mapStateToProps)(Cart)
+export default Cart

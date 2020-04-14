@@ -26,6 +26,12 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-console': ['error', { allow: ['tron'] }],
+    'jsx-a11y/control-has-associated-label': [
+      'warn',
+      {
+        ignoreElements: ['input', 'tr', 'th'],
+      },
+    ],
   },
   settings: {
     'import/resolver': {
