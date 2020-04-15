@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { rgba } from 'polished'
 
 export const ProductList = styled.ul`
   display: grid;
@@ -8,6 +9,7 @@ export const ProductList = styled.ul`
 
   li {
     background: #fff;
+    box-shadow: 0 5px 20px ${rgba('#000', 0.5)};
     border-radius: 4px;
     display: flex;
     flex-direction: column;
