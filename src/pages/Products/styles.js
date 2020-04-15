@@ -40,6 +40,7 @@ export const ProductList = styled.ul`
       border: 0;
       color: #fff;
       display: flex;
+      height: 42px;
       margin-top: auto;
       overflow: hidden;
       text-transform: uppercase;
@@ -53,10 +54,12 @@ export const ProductList = styled.ul`
         align-items: center;
         background: rgba(0, 0, 0, 0.1);
         display: flex;
-        padding: 12px;
+        height: 42px;
+        justify-content: center;
+        width: 52px;
 
-        svg {
-          margin-right: 5px;
+        p {
+          margin-left: 5px;
         }
       }
 
