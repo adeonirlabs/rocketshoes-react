@@ -1,9 +1,39 @@
 import styled from 'styled-components'
+import { rgba } from 'polished'
 
 export const Container = styled.div`
   background: #fff;
+  box-shadow: 0 5px 20px ${rgba('#000', 0.5)};
   border-radius: 4px;
   padding: 30px;
+`
+
+export const EmtpyCart = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+
+  p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  a {
+    background: #7159c1;
+    border-radius: 4px;
+    border: 0;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: filter 0.2s;
+
+    &:hover {
+      filter: brightness(90%);
+    }
+  }
 `
 
 export const ProductTable = styled.table`
@@ -66,13 +96,14 @@ export const Footer = styled.footer`
   justify-content: space-between;
   margin-top: 30px;
 
-  button {
+  a {
     background: #7159c1;
     border-radius: 4px;
     border: 0;
     color: #fff;
     font-weight: bold;
     padding: 12px 20px;
+    text-decoration: none;
     text-transform: uppercase;
     transition: filter 0.2s;
 
