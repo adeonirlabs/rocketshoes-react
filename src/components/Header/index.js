@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import { MdShoppingBasket } from 'react-icons/md'
+import { MdShoppingCart } from 'react-icons/md'
 
 import { Container, Cart } from './styles'
 
@@ -17,11 +17,9 @@ const Header = () => {
         <img src={logo} alt="Rocketshoes" />
       </Link>
       <Cart to="/cart">
-        <div>
-          <strong>My Cart</strong>
-          <span>{counter} items</span>
-        </div>
-        <MdShoppingBasket size={36} color="#fff" />
+        <strong>My Cart</strong>
+        <span>{counter}</span>
+        <MdShoppingCart size={36} color="#fff" />
       </Cart>
     </Container>
   )
