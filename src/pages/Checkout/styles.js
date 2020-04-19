@@ -1,17 +1,18 @@
 import styled from 'styled-components'
 import { rgba } from 'polished'
+import { colors } from 'styles'
 
 export const Container = styled.div`
-  background: #fff;
+  background: ${colors.white};
   border-radius: 4px;
-  padding: 30px;
-  box-shadow: 0 5px 20px ${rgba('#000', 0.5)};
+  box-shadow: 0 5px 20px ${rgba(colors.black, 0.5)};
+  padding: 20px;
 
   div {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
 
   p {
@@ -20,16 +21,17 @@ export const Container = styled.div`
   }
 
   a {
-    background: #7159c1;
+    background: ${colors.secondary};
     border-radius: 4px;
     border: 0;
-    color: #fff;
+    color: ${colors.white};
     font-weight: bold;
+    height: 42px;
+    margin: 0 10px;
     padding: 12px 20px;
     text-decoration: none;
     text-transform: uppercase;
     transition: filter 0.2s;
-    margin: 0 10px;
 
     &:hover {
       filter: brightness(90%);

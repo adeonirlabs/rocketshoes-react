@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { rgba } from 'polished'
+import { colors } from 'styles'
 
 export const ProductList = styled.ul`
   display: grid;
@@ -7,9 +8,17 @@ export const ProductList = styled.ul`
   grid-template-columns: repeat(3, 1fr);
   list-style: none;
 
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr;
+  }
+
   li {
-    background: #fff;
-    box-shadow: 0 5px 20px ${rgba('#000', 0.5)};
+    background: ${colors.white};
+    box-shadow: 0 5px 20px ${rgba(colors.black, 0.5)};
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -21,7 +30,7 @@ export const ProductList = styled.ul`
     }
 
     > strong {
-      color: #333;
+      color: ${colors.grayDark};
       font-size: 16px;
       line-height: 20px;
       margin-top: 5px;
@@ -35,10 +44,10 @@ export const ProductList = styled.ul`
 
     button {
       align-items: center;
-      background: #7159c1;
+      background: ${colors.primary};
       border-radius: 4px;
       border: 0;
-      color: #fff;
+      color: ${colors.white};
       display: flex;
       height: 42px;
       margin-top: auto;
@@ -52,7 +61,7 @@ export const ProductList = styled.ul`
 
       div {
         align-items: center;
-        background: rgba(0, 0, 0, 0.1);
+        background: ${rgba(colors.black, 0.1)};
         display: flex;
         height: 42px;
         justify-content: center;

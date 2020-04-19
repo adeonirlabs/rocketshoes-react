@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import 'react-toastify/dist/ReactToastify.css'
+import { colors } from './colors'
 import background from '../assets/images/background.svg'
 
 export default createGlobalStyle`
@@ -11,7 +12,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #292046 url(${background}) no-repeat center top;
+    background: ${colors.background} url(${background}) no-repeat center top;
+    min-width: 420px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
   }

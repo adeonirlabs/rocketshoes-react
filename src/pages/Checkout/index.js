@@ -8,9 +8,11 @@ const Checkout = () => {
     <Container>
       <div>
         <FaReact size={200} color="#61dafb" className="logo" />
-        <p>This is just a demo, made with ReactJS, Redux and Saga!</p>
+        <p>
+          This is just a sample store built with React, Redux and Redux-Saga!
+        </p>
         <a href="https://github.com/adeonir/rocketshoes" target="blank">
-          Go to GitHub repository
+          Go to project repository on GitHub
         </a>
       </div>
     </Container>

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { colors } from 'styles'
 
 export const Container = styled.header`
   align-items: center;
@@ -20,7 +21,7 @@ export const Cart = styled(Link)`
   }
 
   strong {
-    color: #fff;
+    color: ${colors.white};
     display: block;
     margin-right: 10px;
     text-align: right;
@@ -28,9 +29,9 @@ export const Cart = styled(Link)`
 
   span {
     align-items: center;
-    background: #7159c1;
+    background: ${colors.secondary};
     border-radius: 10px;
-    color: #fff;
+    color: ${colors.white};
     display: flex;
     font-size: 12px;
     height: 20px;
