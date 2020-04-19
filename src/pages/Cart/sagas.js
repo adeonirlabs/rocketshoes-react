@@ -10,7 +10,7 @@ import { toast } from 'react-toastify'
 
 import { api } from 'services'
 import { formatPrice } from 'utils'
-import { setProductStatus } from 'pages/Home/actions'
+import { setProductStatus } from 'pages/Products/actions'
 import { CART_ADD, CART_UPDATE_AMOUNT } from './constants'
 
 import { addToCartSuccess, updateAmountSuccess } from './actions'
