@@ -1,7 +1,5 @@
 <p align="center">
-  <a href="https://adeonir-rocketshoes.netlify.app" target="_blank">
-    <img alt="Demo on Netlify" src="https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png">
-  </a>
+  [![Demo on Netlify](https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png)](https://adeonir-rocketshoes.netlify.app){:target="_blank"}
 </p>
 
 ---
