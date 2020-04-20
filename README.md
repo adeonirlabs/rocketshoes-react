@@ -1,6 +1,4 @@
-<p align="center">
-  [![Demo on Netlify](https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png)](https://adeonir-rocketshoes.netlify.app){:target="_blank"}
-</p>
+[![Demo on Netlify](https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png)](https://adeonir-rocketshoes.netlify.app)
 
 ---
 
