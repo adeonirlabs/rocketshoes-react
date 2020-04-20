@@ -1,8 +1,10 @@
 <p align="center">
-  <a href="https://adeonir-rocketshoes.netlify.app//" target="_blank">
+  <a href="https://adeonir-rocketshoes.netlify.app" target="_blank">
     <img alt="Demo on Netlify" src="https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png">
   </a>
 </p>
+
+---
 
 ![Products](https://res.cloudinary.com/adeonir/image/upload/v1587336525/rocketshoes-products_ioocdn.png)
 
