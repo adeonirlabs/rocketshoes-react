@@ -4,7 +4,7 @@ import { FaReact } from 'react-icons/fa'
 import { colors } from 'styles'
 import { Container } from './styles'
 
-const Checkout = () => {
+export const Checkout = () => {
   return (
     <Container>
       <div>
@@ -23,5 +23,3 @@ const Checkout = () => {
     </Container>
   )
 }
-
-export default Checkout

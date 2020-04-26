@@ -11,7 +11,7 @@ import { storeProducts } from './actions'
 
 import { ProductList } from './styles'
 
-const Products = () => {
+export const Products = () => {
   const dispatch = useDispatch()
   const products = useSelector((state) => state.products)
 
@@ -70,5 +70,3 @@ const Products = () => {
     </ProductList>
   )
 }
-
-export default Products

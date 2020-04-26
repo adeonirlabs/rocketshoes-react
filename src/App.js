@@ -3,7 +3,7 @@ import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 
-import Routes from 'routes'
+import { Routes } from 'routes'
 
 import { Header } from 'components'
 import { GlobalStyles } from 'styles'
@@ -12,7 +12,7 @@ import './config/reactotronConfig'
 
 import { store, history } from 'store'
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <Router history={history}>

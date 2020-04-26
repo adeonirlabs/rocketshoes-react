@@ -15,7 +15,7 @@ import { formatPrice } from 'utils'
 import { colors } from 'styles'
 import { Container, EmtpyCart, ProductTable, Footer } from './styles'
 
-const Cart = () => {
+export const Cart = () => {
   const counter = useSelector((state) => state.cart.length)
 
   const cart = useSelector((state) =>
@@ -126,5 +126,3 @@ const Cart = () => {
     </Container>
   )
 }
-
-export default Cart

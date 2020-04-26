@@ -1,3 +1,3 @@
-export { default as Products } from './Products'
-export { default as Cart } from './Cart'
-export { default as Checkout } from './Checkout'
+export { Products } from './Products'
+export { Cart } from './Cart'
+export { Checkout } from './Checkout'

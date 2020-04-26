@@ -8,8 +8,6 @@ if (process.env.NODE_ENV === 'development') {
   baseURL = 'https://my-json-server.typicode.com/adeonir/rocketshoes-api'
 }
 
-const api = axios.create({
+export const api = axios.create({
   baseURL,
 })
-
-export default api

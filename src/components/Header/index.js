@@ -9,7 +9,7 @@ import { Container, Cart } from './styles'
 
 import logo from '../../assets/images/logo.svg'
 
-const Header = () => {
+export const Header = () => {
   const counter = useSelector((state) => state.cart.length)
 
   return (
@@ -25,5 +25,3 @@ const Header = () => {
     </Container>
   )
 }
-
-export default Header
