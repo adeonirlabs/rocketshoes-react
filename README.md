@@ -1,14 +1,50 @@
-[![Demo on Netlify](https://res.cloudinary.com/adeonir/image/upload/v1587336797/demo-on-netlify_xwgihr.png)](https://adeonir-rocketshoes.netlify.app)
+<h1 align="center">
+  <img alt="GoStack Bootcamp" src=".github/logo-gostack.svg" />
+</h1>
+
+<h2 align="center">
+  <img alt="Rocketshoes" src=".github/logo-rocketshoes.svg" />
+</h2>
+
+<p align="center">
+  This project was developed during the <a href="https://rocketseat.com.br/gostack">Rocketseat GoStack Bootcamp</a>.
+  <br />
+  <br />
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-use">How To Use</a>
+</p>
+
+<br />
+
+<p align="center">
+  <img alt="Rocketshoes" src=".github/rocketshoes-home.png" width="100%">
+  <br />
+  <img alt="Rocketshoes" src=".github/rocketshoes-cart.png" width="100%">
+  <br />
+  <img alt="Rocketshoes" src=".github/rocketshoes-empty-cart.png" width="100%">
+</p>
 
 ---
 
-![Products](https://res.cloudinary.com/adeonir/image/upload/v1587336525/rocketshoes-products_ioocdn.png)
+## Technologies
 
-![Cart](https://res.cloudinary.com/adeonir/image/upload/v1587336535/rocketshoes-cart_z2e3us.png)
+This project was developed with the following technologies:
 
-This project was developed at the [Rocketseat GoStack Bootcamp](https://rocketseat.com.br/gostack).
-
----
+-  [ReactJS](https://reactjs.org/)
+-  [Redux](https://redux.js.org/)
+-  [React Router](https://github.com/ReactTraining/react-router)
+-  [History](https://www.npmjs.com/package/history)
+-  [Redux-Saga](https://redux-saga.js.org/)
+-  [Immer](https://github.com/immerjs/immer)
+-  [Axios](https://github.com/axios/axios)
+-  [Json Server](https://github.com/typicode/json-server)
+-  [Styled-Components](https://www.styled-components.com/)
+-  [Polished](https://polished.js.org/)
+-  [React-Icons](https://react-icons.netlify.com/)
+-  [React Toastify](https://fkhadra.github.io/react-toastify/)
+-  [React Loader Spinner](https://mhnpd.github.io/react-loader-spinner/)
+-  [Reactotron](https://infinite.red/reactotron)
+-  [VS Code](https://code.visualstudio.com/) with [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ## How to use
 
@@ -18,10 +54,10 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/adeonir/rocketshoes
+$ git clone https://github.com/adeonir/rocketshoes-react
 
 # Go into the directory
-$ cd rocketshoes
+$ cd rocketshoes-react
 
 # Install the dependencies
 $ yarn
@@ -39,6 +75,4 @@ This project is under the MIT license.
 
 ---
 
-<p align="center">
 Made with ♥️ by Adeonir Kohl
-</p>

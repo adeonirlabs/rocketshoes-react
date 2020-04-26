@@ -21,7 +21,7 @@ export const Container = styled.div`
   }
 
   a {
-    background: ${colors.secondary};
+    background: ${colors.primary};
     border-radius: 4px;
     border: 0;
     color: ${colors.white};

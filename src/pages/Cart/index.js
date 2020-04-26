@@ -12,6 +12,7 @@ import { removeFromCart, updateAmount } from 'pages/Cart/actions'
 
 import { formatPrice } from 'utils'
 
+import { colors } from 'styles'
 import { Container, EmtpyCart, ProductTable, Footer } from './styles'
 
 const Cart = () => {
@@ -50,7 +51,7 @@ const Cart = () => {
     <Container>
       {counter === 0 ? (
         <EmtpyCart>
-          <MdRemoveShoppingCart size={200} color="#ddd" />
+          <MdRemoveShoppingCart size={200} color={colors.grayLight} />
           <p>Looks like your shopping cart is empty!</p>
           <Link role="button" to="/">
             Start shopping

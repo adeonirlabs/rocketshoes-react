@@ -21,7 +21,7 @@ export const Cart = styled(Link)`
   }
 
   strong {
-    color: ${colors.white};
+    color: ${colors.black};
     display: block;
     margin-right: 10px;
     text-align: right;
@@ -29,7 +29,7 @@ export const Cart = styled(Link)`
 
   span {
     align-items: center;
-    background: ${colors.secondary};
+    background: ${colors.primary};
     border-radius: 10px;
     color: ${colors.white};
     display: flex;

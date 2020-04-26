@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 
 import { MdShoppingCart } from 'react-icons/md'
 
+import { colors } from 'styles'
 import { Container, Cart } from './styles'
 
 import logo from '../../assets/images/logo.svg'
@@ -19,7 +20,7 @@ const Header = () => {
       <Cart to="/cart">
         <strong>My Cart</strong>
         <span>{counter}</span>
-        <MdShoppingCart size={36} color="#fff" />
+        <MdShoppingCart size={36} color={colors.black} />
       </Cart>
     </Container>
   )

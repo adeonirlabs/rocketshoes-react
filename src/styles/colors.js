@@ -1,9 +1,9 @@
 export const colors = {
   white: '#fff',
   black: '#222',
-  background: '#292046',
+  background: '#3d2d71',
   primary: '#7159c1',
-  secondary: '#ff7400',
+  secondary: '#61dafb',
   grayLighter: '#eee',
   grayLight: '#999',
   grayMid: '#666',
