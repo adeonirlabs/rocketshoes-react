@@ -32,4 +32,8 @@ export default createGlobalStyle`
     max-width: 1024px;
     padding: 0 20px 50px;
   }
+
+  .Toastify__toast {
+    border-radius: 4px;
+  }
 `
