@@ -2,11 +2,10 @@
   <img alt="GoStack Bootcamp" src=".github/logo-gostack.svg" />
 </h1>
 
-<h2 align="center">
-  <img alt="Rocketshoes" src=".github/logo-rocketshoes.svg" />
-</h2>
-
 <p align="center">
+  <img alt="Rocketshoes" src=".github/logo-rocketshoes.svg" />
+  <br />
+  <br />
   This project was developed during the <a href="https://rocketseat.com.br/gostack">Rocketseat GoStack Bootcamp</a>.
   <br />
   <br />
