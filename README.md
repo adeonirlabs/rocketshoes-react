@@ -10,18 +10,18 @@
   This project was developed during the <a href="https://rocketseat.com.br/gostack">Rocketseat GoStack Bootcamp</a>.
   <br />
   <br />
-  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-use">How To Use</a>
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#how-to-use">How To Use</a>
 </p>
 
 <br />
 
 <p align="center">
-  <img alt="Rocketshoes" src=".github/rocketshoes-home.png" width="100%">
+  <img alt="Rocketshoes" src=".github/rocketshoes-home.png">
   <br />
-  <img alt="Rocketshoes" src=".github/rocketshoes-cart.png" width="100%">
+  <img alt="Rocketshoes" src=".github/rocketshoes-cart.png">
   <br />
-  <img alt="Rocketshoes" src=".github/rocketshoes-empty-cart.png" width="100%">
+  <img alt="Rocketshoes" src=".github/rocketshoes-empty-cart.png">
 </p>
 
 ---
